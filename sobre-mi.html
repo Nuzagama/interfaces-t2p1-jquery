@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>About me - Álvaro Romero</title>
+    <link rel="icon" type="image/png" href="./img/fav.png" />
+    <!-- estilos -->
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- layout principal. Usamos metodología BEM -->
+    <div class="animacionBackground">
+        <img src="img/effect.png">
+        <img src="img/effect.png">
+    </div>
+    <!-- layout principal. Usamos metodología BEM -->
+    <div class="layout">
+        <!-- barra lateral (info usuario). -->
+        <aside class="layout__aside">
+            <section class="aside__user-info">
+                <!-- información general usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-image">
+                        <img src="img/portrait_img.PNG" class="user-info__image" alt="Foto de perfil">
+                        <!-- aquí iría la sombra -->
+                    </div>
+                    <h2 class="user-info__name">Alvaro Romero</h2>
+                    <h4 class="user-info__job">Freelancer - Web Developer</h4>
+                </div>
+                <!-- menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link ">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="sobre-mi.html" class="menu__link menu__link--active">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">About me</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="curriculum.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="portafolio.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portrait</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="blog.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">My Blog</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="themeToggle">
+                                <i class="iconLight menu__icon fa fa-sun" style="display:none;"></i>
+                                <i class="iconDark menu__icon fa fa-moon"></i>
+                            </div>                                                    
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- link a redes sociales -->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- botón del curriculum -->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Donwload CV</a>
+                </div>
+
+                <!-- pié de página -->
+                <footer class="user-info__footer"> 
+                    Made with <i class="fa-solid fa-heart"></i> | MEDAC
+                </footer>
+            </section>
+        </aside>
+
+        <!-- contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__about">
+                <header class="about__header">
+                    <h1 class="about__title">About <span class="title__color">Me</span></h1>
+                </header>
+                <section class="about__personal-info">
+                    <article class="personal-info__bio">
+                        <p class="personal-info__desription">
+                            Hello there! I'm Alvaro, a web developer based in Spain. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
+                        </p>
+                    </article>
+                    <div class="personal-info__data">
+                        <ul class="personal-info__list">
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Country</span>
+                                <span class="personal-info__value">Spain</span>
+                            </li>
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Email</span>
+                                <span class="personal-info__value">developer@fakemail.com</span>
+                            </li>
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Number</span>
+                                <span class="personal-info__value">666.888.999</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="about__services">
+                    <header class="services__header">
+                        <h2 class="services__title">Things <span class="title__color">I do</span></h2>
+                    </header>
+                    <div class="services__container">
+                        <!-- Primera Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                <i class="service__real-icon fa-solid fa-code"></i>
+                                &nbsp;
+                                    Programming</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    I can program in different languages like HTML, CSS, JavaScript, PHP, Python, Java, C#, C++, etc.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Segunda Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                    <i class="service__real-icon fa-solid fa-school"></i>
+                                    &nbsp; Qualification</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    I have a degree in computer engineering and I have been working in the sector for 5 years.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Tercera Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                    <i class="service__real-icon fa-solid fa-computer"></i>
+                                    &nbsp; Web Develop</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    I can develop web pages with different technologies like HTML, CSS, JavaScript, PHP, Python, Java, C#, C++, etc.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Cuarta Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                    <i class="service__real-icon fa-solid fa-user"></i>
+                                    &nbsp; System Admin</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    I can manage servers with different operating systems like Windows Server, Linux, etc.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!--Idiomas Section-->
+                <section class="about__services">
+                    <header class="services__header">
+                        <h2 class="services__title">Languages <span class="title__color">I speak</span></h2>
+                    </header>
+                    <div class="services__container">
+                        <!-- Primera Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                <i class="service__real-icon fa-solid fa-flag"></i>
+                                &nbsp;
+                                    Spanish</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    My mother tongue is Spanish.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Segunda Pestaña Acordeon-->
+                        <article class="services__service">
+                            <div class="service__icon">
+                            </div>
+                            <div class="service__toggle">
+                                <h3 class="service__title">
+                                    <i class="service__real-icon fa-solid fa-flag"></i>
+                                    &nbsp; English</h3>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__description">
+                                    I have a B2 level of English. I can speak and write in English very efficiently.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <button id="backToTop">Back to Top</button>
+        </main>
+    </div>
+
+        <!-- Menu BigMac-->
+        <div class="menu-toggle">💀</div>
+        <div class="menu_burguer">
+            <div class="menu_burguer__container">  
+                <aside class="layout__aside">
+                    <section class="aside__user-info">
+                        <!-- información general usuario -->
+                        <div class="user-info__general">
+                            <div class="user-info__container-image">
+                                <img src="img/portrait_img.PNG" class="user-info__image" alt="Foto de perfil">
+                                <!-- aquí iría la sombra -->
+                            </div>
+                            <h2 class="user-info__name">Alvaro Romero</h2>
+                            <h4 class="user-info__job">Freelancer - Web Developer</h4>
+                        </div>
+                        <!-- menú de navegación -->
+                        <nav class="layout__burguer">
+                            <ul class="menu__lista_burguer">
+                                <li class="menu__option">
+                                    <a href="index.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-house"></i>
+                                        <span class="menu__overlay">Home</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="sobre-mi.html" class="menu__link menu__link--active">
+                                        <i class="menu__icon fa-solid fa-user"></i>
+                                        <span class="menu__overlay">About me</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="curriculum.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                        <span class="menu__overlay">Curriculum</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="portafolio.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-briefcase"></i>
+                                        <span class="menu__overlay">Portrait</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="blog.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-book"></i>
+                                        <span class="menu__overlay">My Blog</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="contacto.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-envelope"></i>
+                                        <span class="menu__overlay">Contact</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="themeToggle">
+                                        <i class="iconLight menu__icon fa fa-sun" style="display:none;"></i>
+                                        <i class="iconDark menu__icon fa fa-moon"></i>
+                                    </div>                                                                                   
+                                </li>
+                            </ul>
+                        </nav>
+        
+                        <!-- link a redes sociales -->
+                        <div class="user-info__links">
+                            <ul class="links__social">
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>  
+                        <div class="user-info__buttons">
+                            <a href="#" class="user-info__btn">Donwload CV</a>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

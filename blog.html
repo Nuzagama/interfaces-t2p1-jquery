@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Blog - Álvaro Romero</title>
+    <link rel="icon" type="image/png" href="./img/fav.png" />
+    <!-- estilos -->
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- layout principal. Usamos metodología BEM -->
+    <div class="animacionBackground">
+        <img src="img/effect.png">
+        <img src="img/effect.png">
+    </div>
+    <!-- layout principal. Usamos metodología BEM -->
+    <div class="layout">
+        <!-- barra lateral (info usuario). -->
+        <aside class="layout__aside">
+            <section class="aside__user-info">
+                <!-- información general usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-image">
+                        <img src="img/portrait_img.PNG" class="user-info__image" alt="Foto de perfil">
+                        <!-- aquí iría la sombra -->
+                    </div>
+                    <h2 class="user-info__name">Alvaro Romero</h2>
+                    <h4 class="user-info__job">Freelancer - Web Developer</h4>
+                </div>
+                <!-- menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="sobre-mi.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">About me</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="curriculum.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="portafolio.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portrait</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="blog.html" class="menu__link menu__link--active">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">My Blog</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="themeToggle">
+                                <i class="iconLight menu__icon fa fa-sun" style="display:none;"></i>
+                                <i class="iconDark menu__icon fa fa-moon"></i>
+                            </div>                                                  
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- link a redes sociales -->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- botón del curriculum -->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Donwload CV</a>
+                </div>
+
+                <!-- pié de página -->
+                <footer class="user-info__footer"> 
+                    Made with <i class="fa-solid fa-heart"></i> | MEDAC
+                </footer>
+            </section>
+        </aside>
+
+        <!-- contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__blog">
+                <header class="blog__header">
+                    <h1 class="blog__title">BLOG</h1>
+                </header>
+                <section class="blog__articles">
+                    <article class="articles__article">
+                        <div class="article__top">
+                            <div class="article__category">Code</div>
+                            <a href="#" class="article__image-link" data-title="Learn to code" data-content="Using this bootcamp you will learn to code from scratch." data-image="img/articulo-1.jpg" data-url="https://ejemplo.com/articulo1">
+                                
+                                <div class="article__mask">
+                                    <img class="article__image" src="img/articulo-1.jpg" alt="Imagen del blog" >
+                                </div>
+                                <div class="article__logo">
+                                    <i class="article__icon fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__bottom">
+                            <time datetime="2023-09-05" class="article__date">25/09/2024</time>
+                            <a href="#" class="article__link">
+                                <h2 class="article__title">Learn to Code</h2>
+                            </a>
+                            <p class="article__text">
+                                Using this bootcamp you will learn to code from scratch.
+                                                        </p>
+                        </div>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__top">
+                            <div class="article__category">Design</div>
+                            <a href="#" class="article__image-link" data-title="Use animations in CSS" data-content="Animations are a great way to improve your website. Learn how to use them." 
+                            data-image="img/articulo-2.jpg" data-url="https://ejemplo.com/articulo2">
+                                
+                                <div class="article__mask">
+                                    <img class="article__image" src="img/articulo-2.jpg" alt="Imagen del blog" >
+                                </div>
+                                <div class="article__logo">
+                                    <i class="article__icon fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__bottom">
+                            <time datetime="2023-09-05" class="article__date">05/09/2023</time>
+                            <a href="#" class="article__link">
+                                <h2 class="article__title">Use animations in CSS</h2>
+                            </a>
+                            <p class="article__text">
+                                Animations are a great way to improve your website. Learn how to use them.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__top">
+                            <div class="article__category">Code</div>
+                            <a href="#" class="article__image-link" data-title="JavaScript basics documentation" 
+                            data-content="Learn the basics of JavaScript with this documentation. Updated to the latest version."
+                            data-image="img/articulo-3.jpg" 
+                            data-url="https://ejemplo.com/articulo1">
+                                
+                                <div class="article__mask">
+                                    <img class="article__image" src="img/articulo-3.jpg" alt="Imagen del blog" >
+                                </div>
+                                <div class="article__logo">
+                                    <i class="article__icon fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__bottom">
+                            <time datetime="2023-08-30" class="article__date">30/08/2023</time>
+                            <a href="#" class="article__link">
+                                <h2 class="article__title">JavaScript basics documentation</h2>
+                            </a>
+                            <p class="article__text">
+                                Learn the basics of JavaScript with this documentation. Updated to the latest version.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="articles__article">
+                        <div class="article__top">
+                            <div class="article__category">Design</div>
+                            <a href="#" class="article__image-link" data-title="Web design and colour theory" 
+                            data-content="The importance of colour theory in web design. Study about the colour wheel and how to use it."
+                            data-image="img/articulo-4.jpg" 
+                            data-url="https://ejemplo.com/articulo1">
+                                
+                                <div class="article__mask">
+                                    <img class="article__image" src="img/articulo-4.jpg" alt="Imagen del blog" >
+                                </div>
+                                <div class="article__logo">
+                                    <i class="article__icon fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__bottom">
+                            <time datetime="2023-03-05" class="article__date">05/03/2023</time>
+                            <a href="#" class="article__link">
+                                <h2 class="article__title">Web design and colour theory</h2>
+                            </a>
+                            <p class="article__text">
+                                The importance of colour theory in web design. Study about the colour wheel and how to use it.
+                            </p>
+                        </div>
+                    </article>
+                    </section>
+                <div id="miPopup" class="popup">
+                    <div class="popup__content">
+                        <span class="popup__close">&times;</span>
+                        <h1 class="popup__title">Título del Artículo</h1>
+                        <img class="popup__image" src="" alt="Imagen del Artículo">
+                        <p class="popup__text">Aquí va el contenido extendido del artículo...</p>
+                        <a href="" class="popup__link">Leer más</a>
+                    </div>
+                </div>  
+            </section>
+            <button id="backToTop">Back to Top</button>
+        </main>
+    </div>
+        <!-- Menu BigMac-->
+        <div class="menu-toggle">💀</div>
+        <div class="menu_burguer">
+            <div class="menu_burguer__container">  
+                <aside class="layout__aside">
+                    <section class="aside__user-info">
+                        <!-- información general usuario -->
+                        <div class="user-info__general">
+                            <div class="user-info__container-image">
+                                <img src="img/portrait_img.PNG" class="user-info__image" alt="Foto de perfil">
+                                <!-- aquí iría la sombra -->
+                            </div>
+                            <h2 class="user-info__name">Alvaro Romero</h2>
+                            <h4 class="user-info__job">Freelancer - Web Developer</h4>
+                        </div>
+                        <!-- menú de navegación -->
+                        <nav class="layout__burguer">
+                            <ul class="menu__lista_burguer">
+                                <li class="menu__option">
+                                    <a href="index.html" class="menu__link ">
+                                        <i class="menu__icon fa-solid fa-house"></i>
+                                        <span class="menu__overlay">Home</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="sobre-mi.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-user"></i>
+                                        <span class="menu__overlay">About me</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="curriculum.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                        <span class="menu__overlay">Curriculum</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="portafolio.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-briefcase"></i>
+                                        <span class="menu__overlay">Portrait</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="blog.html" class="menu__link menu__link--active">
+                                        <i class="menu__icon fa-solid fa-book"></i>
+                                        <span class="menu__overlay">My Blog</span>
+                                    </a>
+                                </li>
+                                <li class="menu__option">
+                                    <a href="contacto.html" class="menu__link">
+                                        <i class="menu__icon fa-solid fa-envelope"></i>
+                                        <span class="menu__overlay">Contact</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="themeToggle">
+                                        <i class="iconLight menu__icon fa fa-sun" style="display:none;"></i>
+                                        <i class="iconDark menu__icon fa fa-moon"></i>
+                                    </div>                                                                                   
+                                </li>
+                            </ul>
+                        </nav>
+        
+                        <!-- link a redes sociales -->
+                        <div class="user-info__links">
+                            <ul class="links__social">
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="social__option">
+                                    <a href="#" class="social__link">
+                                        <i class="social__icon fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>  
+                        <div class="user-info__buttons">
+                            <a href="#" class="user-info__btn">Donwload CV</a>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
